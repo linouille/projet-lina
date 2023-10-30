@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family:  "poppins", sans-serif;
 }
 body{
     background:	#ede4d6;
@@ -105,6 +105,8 @@ body{
     transform: translate(-50%, -50%);
     width: 75%;
     height: 550px;
+    background-image: url("backgroundPAW.jpg");
+    background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     border-radius: 10px;
@@ -134,7 +136,7 @@ body{
     margin: 20px, 0;
 }
 .text-sci h2 span{
-    font-size:30 px;
+    font-size: 30px;
 }
 .social-icons a i{
     font-size: 22px;
