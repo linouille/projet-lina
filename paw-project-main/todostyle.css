@@ -10,11 +10,60 @@ body{
     min-height: 100vh;
 }
 header{
-    font-size: 1.5rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 25px 12.5%;
+    background: #d2b38d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100 ;
 }
-header, form{
+.navbar h2{
+    font-size: 25px;
+    position: absolute;
+    top: 17px;
+    left: 55px;
+    color: #513d3d;
+    cursor: pointer;
+}
+.navbar a{
+    position: relative;
+    font-size: 18px;
+    color: #3c3128;
+    font-weight: 500;
+    margin-right: 30px;
+    text-decoration: none;
+}
+.navbar a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 2px;
+    background: #3c3128;
+    border-radius: 5px;
+    transform: translateY(10px);
+    opacity: 0;
+    transition: .5s;
+}
+.navbar a:hover::after{
+    transform: translateY(0px);
+    opacity: 1;
+}
+form{
+    padding: 200px;
     min-height: 20vh;
     display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form h1{
+    display: flex;
+    padding: 80px;
     justify-content: center;
     align-items: center;
 }
@@ -23,6 +72,7 @@ form input, form button{
     padding-left: 1rem;
     font-size: 1.8rem;
     border: none;
+    outline-color: #816442;
     background: #ffffff;
     border-radius: 2rem;
 }
@@ -54,7 +104,7 @@ form button:hover{
     margin: 0.5rem;
     padding-left: 0.5rem;
     background: white;
-    color: black;
+    color: rgb(85, 65, 65);
     font-size: 1.5rem;
     display: flex;
     justify-content: space-between;

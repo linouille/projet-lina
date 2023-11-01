@@ -19,16 +19,16 @@ function addTodo(event){
     //ajout a la memoire locale
     saveLocalTodos(todoInput.value);
     const completedButton= document.createElement("button");
-    completedButton.innerHTML="<i class='bx bxs-check-circle'></li>";
+    completedButton.innerHTML='<i class="bx bxs-check-circle"></li>';
     completedButton.classList.add("complete-btn");  
     todoDiv.appendChild(completedButton);
 
     const trashButton= document.createElement("button");
-    trashButton.innerHTML=  "<i class='bx bxs-trash'></li>"
+    trashButton.innerHTML=  '<i class="bx bxs-trash"></li>'
     trashButton.classList.add("trash-btn");
-    todoDiv.appendChild("trashButton");
+    todoDiv.appendChild(trashButton);
 
-    todoList.appendChild("todoDiv");
+    todoList.appendChild(todoDiv);
     todoInput.value="";
 }
 
@@ -38,7 +38,7 @@ function deleteCheck(e){
         const todo= item.parentElement;
         todo.classList.add("slide");
 
-        removeLocalTodos(Todo);
+        removeLocalTodos(todo);
         todo.addEventListener("transitionend", function(){
             todo.remove();
         });
@@ -99,12 +99,12 @@ function getLocalTodos(){
         todoDiv.appendChild(newTodo);
 
         const completedButton=document.createElement("button");
-        completedButton.innerHTML="<i class='bx bxs-check-circle'></li>";
+        completedButton.innerHTML='<i class="bx bxs-check-circle"></li>';
         completedButton.classList.add("complete-btn");
         todoDiv.appendChild(completedButton);
 
         const trashButton=document.createElement("button");
-        trashButton.innerHTML="<i class='bx bxs-trash'></li>";
+        trashButton.innerHTML='<i class="bx bxs-trash"></li>';
         trashButton.classList.add("trash-btn");
         todoDiv.appendChild(trashButton);
 

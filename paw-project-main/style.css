@@ -15,88 +15,15 @@ body{
     padding: 25px 12.5%;
     background: #d2b38d;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100 ;
 }
-.navbar h2{
-    font-size: 25px;
-    position: absolute;
-    top: 30px;
-    left: 55px;
-    color: #513d3d;
-    cursor: pointer;
-}
-.navbar h2::after{
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -6px;
+.background{
     width: 100%;
-    height: 2px;
-    border-radius: 5px;
-    transform: translateY(10px);
-    opacity: 0;
-    transition: .5s;
-}
-.navbar h2:hover::after{
-    transform: translateY(0px);
-    opacity: 1;
-}
-.navbar a{
-    position: relative;
-    font-size: 16px;
-    color: #3c3128;
-    font-weight: 500;
-    margin-right: 30px;
-}
-.navbar a::after{
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-    width: 100%;
-    height: 2px;
-    background: #3c3128;
-    border-radius: 5px;
-    transform: translateY(10px);
-    opacity: 0;
-    transition: .5s;
-}
-.navbar a:hover::after{
-    transform: translateY(0px);
-    opacity: 1;
-}
-.searchbar{
-    width: 250px;
-    height: 45px;
-    background: transparent;
-    border: 2px solid #3c3128;
-    border-radius: 6px;
-    display: flex;
-    align-items: center;
-}
-.searchbar input{
-    width: 100%;
-    background: transparent;
-    border: none;
-    outline: none;
-    font-size: 16px;
-    color: #2d251e;
-}
-.searchbar input::placeholder{
-    color: #3c3128;
-}
-.searchbar button{
-    width: 40px;
-    height: 100%;
-    background: transparent;
-    outline: none;
-    border: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
+    height: 100vh;
+    background-image: url('https://i.pinimg.com/originals/e1/4d/bd/e14dbd33cd5c46bf953b1170c8f94a94.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    filter: blur(10px);
 }
 .container{
     position: absolute;
@@ -105,7 +32,7 @@ body{
     transform: translate(-50%, -50%);
     width: 75%;
     height: 550px;
-    background-image: url("backgroundPAW.jpg");
+    background-image: url('https://i.pinimg.com/originals/e1/4d/bd/e14dbd33cd5c46bf953b1170c8f94a94.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -140,7 +67,7 @@ body{
 }
 .social-icons a i{
     font-size: 22px;
-    color: #3c5840;
+    color: #775800;
     margin-right: 10px;
     transition: .5s ease;
 }
@@ -163,6 +90,7 @@ body{
     width: 100%;
     height: 100%;
     background: transparent;
+    backdrop-filter: blur(20px);
    border-top-right-radius: 10px ;
    border-bottom-right-radius: 10px ;
    color: #5e4c3c;
@@ -249,28 +177,13 @@ body{
     width: 100%;
     height: 45px;
     top: 80px;
-    background: #ede4d6;
+    background: #f5b584;
     border: 1px solid #7c6551;
     padding: 5px 9px;
     cursor: pointer;
     font-size: 16px;
     font-weight: 500;
     transition: 0.8s
-}
-.btn::before{
-    content: "";
-    position: absolute;
-    left: -50px;
-    width: 105%;
-    height: 0%;
-    background: #d2b38d;
-    z-index: -1;
-    transition: 0.8s;
-    top: 90px;
-    border-radius: 10px 10px 10px 10px;
-}
-.btn:hover::before{
-    height: 72%;
 }
 .form-box .login-register{
     font-size: 14.5px;
