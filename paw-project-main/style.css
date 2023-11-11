@@ -25,14 +25,28 @@ body{
     width: 768px;
     max-width: 100%;
     min-height: 480px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
 }
-.container h1{
+.container h1, .toggle-create > h1{
     color: #4d422f;
     font-size: 40px;
     line-height: 20px;
     letter-spacing: 0.3px;
     margin: 20px 0;
 }
+
+.toggle-create > h1{
+    color: #bf7e0d;
+    font-size: 40px;
+    line-height: 20px;
+    letter-spacing: 0.3px;
+    margin: 20px 0;
+    white-space: 10px;
+    line-height: 35px;
+}
+
 .container span{
     color: #4d422f;
     font-size: 12px;
@@ -150,7 +164,7 @@ body{
 }
 .toggle{
     background-color: #ede4d6;
-    height: 100%;
+    /* height: 100%;
     background: linear-gradient(to right, #a0805b, #816854);
     color: #ffffff;
     border-radius: 30px;
@@ -159,12 +173,26 @@ body{
     height: 100%;
     width: 200%;
     transform: translateX(0);
-    transition: all 0.6s ease-in-out;
+    transition: all 0.6s ease-in-out; */
+
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 415px;
+    background-color: #5b3a07;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    border-radius: 30px;
+    /* right: 5%; */
 }
 .container.active .toggle{
     transform: translateX(50%);
 }
-.toggle-panel{
+.toggle-create{
     position: absolute;
     width: 28%;
     height: 69%;
@@ -176,6 +204,16 @@ body{
     transform: translateX(0);
     transition: all 0.6s ease-in-out;
 }
+
+.panelContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 550px;
+    border: 2px solid black;
+}
+
 .toggle-left{
     transform: translateX(-200%);
 }
@@ -189,7 +227,7 @@ body{
 .container.active .toggle-right{
     transform: translateX(200%);
 }
-.toggle-container button{
+.toggle-container button, .toggle-create > button{
     background: rgb(120, 167, 130);
     padding: 10px 45px;
     border-radius: 8px;
@@ -200,7 +238,14 @@ body{
     color: #ffffff;
     cursor: pointer;
 }
-.toggle-container button.hidden{
+.toggle-container button.hidden  , .toggle-create > button.hidden{
     background-color: transparent;
     background: rgb(120, 167, 130);
+    transition: all ease-out 1s;
+}
+
+.toggle-create > button:hover{
+    background-color: transparent;
+    background: rgb(120, 167, 130);
+    margin-right: 200px;
 }
