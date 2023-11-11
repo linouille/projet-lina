@@ -10,79 +10,51 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
  </head>
  <body>
-    <header class="header">  
-    </header>
-    <div class="background"></div>
     <div class="container">
-        <div class="content">
-            <h2><i class='bx bxs-coin-stack'></i>Tiddy</h2>
-            <div class="text-sci">
-                <h2>Welcome<br><span>to our website!</span></h2>
-                <p> Never miss a beat in your busy life!</p>  
-                <p> Tired of forgetting important tasks and appointments?</p>
-                <p>Our user-friendly to-do list website is here to help you stay organized, efficient, and stress-free</p>
-                <div class="social-icons">
-                    <a href="#"><i class='bx bxl-instagram'></i></a>
-                    <a href="#"><i class='bx bxl-facebook-circle' ></i></a>
-                    <a href="#"><i class='bx bxl-twitter' ></i></a>
+        <div class="form-container sign-up">
+            <form>
+               <h1> Create account</h1>
+               <div class="social-icon">
+                <a href="#"><i class='bx bxl-github' ></i></a>
+                <a href="#"><i class='bx bxl-facebook-circle'></i></a>
+                <a href="#"><i class='bx bxl-linkedin-square'></i></a>
+               </div>
+            </form>
+            <span>Or use your e-mail for registration</span>
+            <input type="text" placeholder="Name">
+            <input type="email" placeholder="E-mail">
+            <input type="password" placeholder="Password">
+            <button type="submit">SIGN UP</button>
+        </div>
+        <div class="form-container sign-in">
+            <form>
+                <h1>Sign In</h1>
+                <div class="social-icon">
+                 <a href="#"><i class='bx bxl-google-plus-circle'></i></a>
+                 <a href="#"><i class='bx bxl-facebook-circle'></i></a>
+                 <a href="#"><i class='bx bxl-linkedin-square'></i></a>
                 </div>
-            </div>
+                <span>Or use your e-mail</span>
+                 <input type="email" placeholder="E-mail">
+                 <input type="password" placeholder="Password">
+                 <a href="#">Forgot your password?</a>
+                 <button type="submit"> <a href="./list.html">SIGN IN</button></a>
+            </form>
         </div>
-        <div class="logreg-box">
-            <div class="form-box login">
-                <form action="#">
-                    <h2>Sign In</h2>
-
-                    <div class="input-box">
-                        <span class="icon"><i class='bx bx-envelope'></i></span>
-                        <input type="email" required>
-                        <label>e-mail</label>
-                    </div>
-                    <div class="input-box">
-                        <span class="icon"><i class='bx bx-lock-alt' ></i></span>
-                        <input type="password" required>
-                        <label>password</label>
-                    </div>
-                        <div class="remember-forgot">
-                            <label><input type="checkbox">Remember me</label>
-                            <a href="#">i forgot my password :(</a>
-                        </div>
-                        <button type="submit" class="btn">Sign In</button>
-                        <div class="login-register">
-                            <p>You're not among us yet?<a href="#" class="register-link">Sign up here!</a></p>
-                        </div>   
-                </form>
-            </div>
-
-            <div class="form-box register">
-                <form action="#">
-                    <h2>Sign Up</h2>
-                    <div class="input-box">
-                        <span class="icon"><i class='bx bxs-user'></i></span>
-                        <input type="text" required>
-                        <label>Name</label>
-                    </div>
-
-                    <div class="input-box">
-                        <span class="icon"><i class='bx bx-envelope'></i></span>
-                        <input type="email" required>
-                        <label>e-mail</label>
-                    </div>
-                    <div class="input-box">
-                        <span class="icon"><i class='bx bx-lock-alt' ></i></span>
-                        <input type="password" required>
-                        <label>password</label>
-                    </div>
-                        <div class="remember-forgot">
-                            <label><input type="checkbox">I agree to the terms & conditions</label>
-                        </div>
-                        <button type="submit" class="btn">Sign Up</button>
-                        <div class="login-register">
-                            <p>already have an account?<a href="#" class="register-link">Sign in here!</a></p>
-                        </div>   
-                </form>
-            </div>
+    </div>
+    <div class="toggle-container">
+     <div class="toggle">
+        <div class="toggle-panel toggle-left">
+            <h1>Welcome back :D</h1>
+            <p>Log in to access all the features</p>
+            <button class="hidden" id="login">SIGN IN</button>
         </div>
+        <div class="toggle-panel toggle-right">
+            <h1>Hello!</h1>
+            <p>Register and start planning your day!</p>
+            <button class="hidden" id="register">SIGN UP</button>
+        </div>
+     </div>
     </div>
     <script src="script.js"></script>
  </body>

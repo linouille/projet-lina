@@ -13,10 +13,12 @@ header{
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    padding: 25px 12.5%;
+    width: 10%;
+    height: 100%;
+    padding: 30px;
     background: #d2b38d;
     display: flex;
+    flex-direction: column;;
     justify-content: center;
     align-items: center;
     z-index: 100 ;
@@ -25,16 +27,17 @@ header{
     font-size: 25px;
     position: absolute;
     top: 17px;
-    left: 55px;
+    left: 25px;
     color: #513d3d;
-    cursor: pointer;
 }
 .navbar a{
     position: relative;
+    justify-content: space-around;
+    columns: 1;
     font-size: 18px;
     color: #3c3128;
     font-weight: 500;
-    margin-right: 30px;
+    left: 7px;;
     text-decoration: none;
 }
 .navbar a::after{
@@ -55,7 +58,7 @@ header{
     opacity: 1;
 }
 form{
-    padding: 200px;
+    padding: 150px;
     min-height: 20vh;
     display: flex;
     justify-content: center;
@@ -63,7 +66,7 @@ form{
 }
 form h1{
     display: flex;
-    padding: 80px;
+    padding: 20px;
     justify-content: center;
     align-items: center;
 }
