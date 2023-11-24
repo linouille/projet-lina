@@ -5,16 +5,19 @@
     font-family:  "poppins", sans-serif;
 }
 body{
-    /*background-image: url(./backgroundPAW.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    filter: blur(10px);*/
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     height: 100vh;
+    width: 100%;
+}
+.background{
+    background-image: url("./brown-papier-graphique-fond-beige-g0nn9m.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    filter: blur(6 px);
 }
 .container{
     background-color: #ede4d6;
@@ -64,6 +67,14 @@ body{
     margin-top: 10px;
     color: #ffffff;
     cursor: pointer;
+    transition: all 0.2s ease;
+}
+.container button:hover{
+    transform: scale(0.96);
+}
+.container button a{
+    letter-spacing: 0.5;
+    color: #ffffff;
 }
 .container button.hidden{
     background-color: transparent;
@@ -135,9 +146,9 @@ body{
 }
 .toggle-container{
     position: absolute;
-    top: 30;
+    top: 109px;
     left: 50%;
-    width: 28%;
+    width: 400px;
     height: 69%;
     overflow: hidden;
     transition: all 0.6s ease-in-out;
@@ -145,14 +156,14 @@ body{
     z-index: 1000;
 }
 .container.active .toggle-container{
-    transform: translateX(-100%);
+    transform: translateX(-400px);
     border-radius: 0 150px 100px 0;
 }
 .toggle{
     background-color: #ede4d6;
     height: 100%;
     background: linear-gradient(to right, #a0805b, #816854);
-    color: #ffffff;
+    color: #ffffff; 
     border-radius: 30px;
     position: relative;
     left: -100%;
@@ -169,10 +180,6 @@ body{
     width: 28%;
     height: 69%;
     top: 30;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    flex-direction: column;
     transform: translateX(0);
     transition: all 0.6s ease-in-out;
 }
@@ -189,18 +196,43 @@ body{
 .container.active .toggle-right{
     transform: translateX(200%);
 }
+.toggle-container h1{
+    position: absolute;
+    letter-spacing: 0.3px;
+    font-size: 40px;
+    top: 36%;
+    right: 55%;
+}
+.toggle-container p{
+    position: absolute;
+    top: 185px;
+    right: 25%;
+    font-size: 20px;
+    text-align: center;
+    width: 250px;
+}
 .toggle-container button{
+    position: absolute;
+    top: 80%;
+    right: 55%;
     background: rgb(120, 167, 130);
     padding: 10px 45px;
     border-radius: 8px;
     font-weight: 600px;
     letter-spacing: 0.5;
     border: 1px solid transparent;
-    margin-top: 10px;
+    align-items: center;
+    text-align: center;
     color: #ffffff;
     cursor: pointer;
+    transition: all 0.2s ease;
+}
+.toggle-right button:hover{
+    transform: scale(0.96);
 }
 .toggle-container button.hidden{
     background-color: transparent;
+    align-items: center;
+    text-align: center;
     background: rgb(120, 167, 130);
 }

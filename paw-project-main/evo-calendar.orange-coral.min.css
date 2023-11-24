@@ -1,0 +1,113 @@
+.orange-coral{
+    -webkit-box-shadow:0 10px 50px -20px rgba(171, 134, 86, 0.65);
+    box-shadow:0 10px 50px -20px rgba(91, 78, 72, 0.65);
+    border:2px solid #997a6a;
+    }
+    .orange-coral .calendar-sidebar{
+        background:#d6bca1;
+        background:-o-linear-gradient(left,#a28b6e,#cec0a7);
+        background:-webkit-gradient(linear,left top,right top,from(#a68e6f),to(#cec0a7));
+        background:linear-gradient(to right,#ad9374,#cec0a7);
+        -webkit-box-shadow:5px 0 18px -3px rgb(129, 117, 112);
+        box-shadow:5px 0 18px -3px rgb(104, 94, 90);
+    }
+    .orange-coral.sidebar-hide .calendar-sidebar{
+        -webkit-box-shadow:none;
+        box-shadow:none;
+    }
+    .orange-coral .calendar-sidebar>.month-list::-webkit-scrollbar-thumb:hover{
+        background:#937d62;
+    }
+    .orange-coral .calendar-sidebar>.month-list>.calendar-months>li:hover{
+        background-color:#937d62;
+    }
+    .orange-coral .calendar-sidebar>.month-list>.calendar-months>li.active-month{
+        background-color:#937d62;
+    }
+    .orange-coral .calendar-sidebar>span#sidebarToggler,.orange-coral #eventListToggler{
+        background-color:#689156;
+        -webkit-box-shadow:0 0 18px -3px #587d49;
+        box-shadow:0 0 18px -3px #587d49;
+    }
+    .orange-coral th[colspan="7"]{
+        position:relative;
+        font-size:30px;
+        color:#689156;
+    }
+    .orange-coral th[colspan="7"]::after{
+        content:'';
+        display:block;
+        width:92%;
+        height:1px;
+        margin:0 auto;
+        background:#689156;
+    }
+    .orange-coral tr.calendar-body .calendar-day .day:hover{
+        background-color:rgba(255,153,102,.32);
+        color:#689156;
+    }
+    .orange-coral tr.calendar-body .calendar-day .day.calendar-today{
+        background:#689156;
+        background:-o-linear-gradient(left,#a28b6e,#cec0a7);
+        background:-webkit-gradient(linear,left top,right top,from(#a28b6e),to(#cec0a7));
+        background:linear-gradient(to right,#a28b6e,#cec0a7);
+    }
+    .orange-coral tr.calendar-body .calendar-day .day.calendar-active,.orange-coral tr.calendar-body .calendar-day .day.calendar-active:hover{
+        border-color:#eedec1;
+    }
+    .orange-coral tr.calendar-body .calendar-day .day.calendar-today:hover{
+        color:#eedec1;
+    }
+    .orange-coral .calendar-events{
+        background-color:#eedec1;
+    }
+    .orange-coral .calendar-events::-webkit-scrollbar-thumb{
+        background:#689156;
+        border-radius:5px
+    }
+    .orange-coral .calendar-events::-webkit-scrollbar-thumb:hover{
+        background:#689156;
+    }
+    .orange-coral .event-container>.event-icon>div.event-bullet-event,.orange-coral .event-indicator>.type-bullet>div.type-event{
+        background-color:#689156;
+    }
+    .orange-coral .event-list>.event-empty{
+        background-color:rgba(255,150,101,.15);
+        border:1px solid #997a6a;
+    }
+    .orange-coral .event-list>.event-empty>p{
+        color:#6c564b;
+    }
+    .orange-coral .event-container>.event-info>p.event-title>span{
+        color:#6c564b;
+        background-color:rgba(255,150,101,.15);
+        border:1px solid #6c564b;
+    }
+    @media only screen and (max-width:768px){
+        .orange-coral .calendar-inner::after{
+            background-color:rgba(160,131,119,.5)
+        }
+        .orange-coral .calendar-events{
+            -webkit-box-shadow:-5px 0 18px -3px rgba(255,152,101,.5);
+            box-shadow:-5px 0 18px -3px rgba(255,152,101,.5)
+        }
+        .orange-coral.event-hide .calendar-events{
+            -webkit-box-shadow:none;
+            box-shadow:none
+        }
+    }
+    @media screen and (max-width:425px){
+        .orange-coral .calendar-sidebar>.calendar-year{
+            background:#6c564b;
+            background:-o-linear-gradient(left,#a28b6e,#cec0a7);
+            background:-webkit-gradient(linear,left top,right top,from(#a28b6e),to(#cec0a7))
+            ;background:linear-gradient(to right,#a28b6e,#cec0a7);
+            -webkit-box-shadow:0 5px 18px -3px rgba(152,91,61,.65);
+            box-shadow:0 3px 8px -3px rgba(152,91,61,.65)
+        }
+        .orange-coral .calendar-sidebar>.month-list{
+            background:-o-linear-gradient(left,#a28b6e,#cec0a7);
+            background:-webkit-gradient(linear,left top,right top,from(#a28b6e),to(#cec0a7));
+            background:linear-gradient(to right,#a28b6e,#cec0a7)
+        }
+    }
