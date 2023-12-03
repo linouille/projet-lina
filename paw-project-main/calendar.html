@@ -5,90 +5,60 @@
     <meta name="viewport" content="width=device-width, initial scale=1.0">
     <link rel="shortcut icon" type="image/jpg" href="">
     <link rel="stylesheet" href="calendar.css">
-    <link rel="stylesheet" href="evo-calendar.min.css">
-    <link rel="stylesheet" href="evo-calendar.orange-coral.min.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>My Calendar</title>
 </head>
+<header>
+  <nav class="navbar">
+      <h2><i class='bx bxs-balloon'></i>Tiddy</h2>
+      <ul>
+      <li><a href="about.html"><i class='bx bxs-home'></i>Home</a></li>
+      <li><a href="list.html"><i class='bx bxs-check-square'></i>Todolist</a></li>
+      <li><a href="#"><i class='bx bxs-smile'></i>Motivation</a></li>
+      <li><a href="#"><i class='bx bxs-user'></i>account</a></li>
+      </ul>
+  </nav>    
+</header>
 <body>
-  <div class="background"></div>
-    <div class="box"></div>
-    <div id="calendar"></div>
-    <header>
-      <nav class="navbar">
-        <ul>
-          <h2><i class='bx bxs-balloon'></i>Tiddy</h2>
-          <li><a href="about.html"><i class='bx bxs-home'></i>Home</a></li>
-          <li><a href="list.html"><i class='bx bxs-check-square'></i>Todolist</a></li>
-          <li><a href="#"><i class='bx bxs-smile'></i>Motivation</a></li>
-          <li><a href="#"><i class='bx bxs-user'></i>account</a></li>
-        </ul>
-      </nav>    
-  </header>
-
-
-
-
-
-
-
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
-    <script src="evo-calendar.min.js"></script>
-    
-    <script>
-        $(document).ready(function() {
-            $('#calendar').evoCalendar({
-                theme: "Orange Coral",
-                calendarEvents: [
-      {
-        id: 'event 1', // Event's ID (required)
-        name: "New Year", // Event name (required)
-        date: "January/1/2020", // Event date (required)
-        description: "Wishing you a dazzling New Year filled with adventures as epic as your favorite blockbuster, achievements as spectacular as a superhero's triumph, and joy that outshines the brightest fireworks! 🎉🚀 Cheers to an extraordinary year ahead!",
-        type: "holiday", // Event type (required)
-        everyYear: true,// Same event every year (optional)
-        color: "rgb(255, 0, 0)",
-      },
-      {
-        id: 'event 2', // Event's ID (required)
-        name: "summer", // Event name (required)
-        date: "June/21/2020", // Event date (required)
-        description: "Embrace the warmth of summer's embrace, where each sunbeam whispers tales of joy and every breeze carries the promise of adventure",
-        type: "season", // Event type (required)
-        everyYear: true,// Same event every year (optional)
-        color: "rgb(255, 255, 0)",
-      },
-      {
-        id: 'event 3', // Event's ID (required)
-        name: "autumn", // Event name (required)
-        date: "September/21/2020", // Event date (required)
-        description: "As the leaves fall, let your worries follow suit, for in the gentle rustle of autumn, there lies the beauty of letting go",
-        type: "season", // Event type (required)
-        everyYear: true,// Same event every year (optional)
-        color: "rgb(214, 118, 0)",
-      },
-      {
-        id: 'event 4', // Event's ID (required)
-        name: "winter", // Event name (required)
-        date: "December/21/2020", // Event date (required)
-        description: "Winter whispers a tale of serenity, where each snowflake is a chapter of magic, and the world is painted in the quiet elegance of frosty dreams",
-        type: "season", // Event type (required)
-        everyYear: true,// Same event every year (optional)
-        color: "rgb(72, 152, 153)",
-      },
-      {
-        id: 'event 5', // Event's ID (required)
-        name: "spring", // Event name (required)
-        date: "March/21/2020", // Event date (required)
-        description: "In the garden of spring, may your days be as bright as daffodils, as carefree as butterflies, and as sweet as the gentle kiss of a sunbeam on a blossoming flower",
-        type: "season", // Event type (required)
-        everyYear: true,// Same event every year (optional)
-        color: "rgb(255, 102, 159)",
-      },
-    ]
-    
-            })
-        })
-    </script>
+    <div class="container">
+      <div class="calendar">
+        <div class="calendar-header">
+          <span class="month-picker" id="month-picker"> May </span>
+          <div class="year-picker" id="year-picker">
+            <span class="year-change" id="pre-year">
+              <pre><</pre>
+              <span id="year">2023</span>
+              <span class="year-change" id="next-year">
+                <pre>></pre>
+              </span>
+            </span>
+          </div>
+        </div>
+        <div class="calendar-body">
+          <div class="calendar-week-days">
+            <div>Sun</div>
+            <div>Mon</div>
+            <div>Tue</div>
+            <div>Wed</div>
+            <div>Thu</div>
+            <div>Fri</div>
+            <div>Sat</div>
+          </div>
+          <div class="calendar-days">
+          </div>
+        </div>
+        <div class="calendar-footer">
+        </div>
+        <div class="date-time-formate">
+          <div class="day-text-formate">TODAY</div>
+          <div class="date-time-value">
+            <div class="time-formate">02:51:20</div>
+            <div class="date-formate">23 - july -2023</div>
+            <div class="month-list"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="calendar_script.js"></script>
 </body>
 </html>

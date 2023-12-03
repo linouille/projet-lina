@@ -1,70 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
- <head>
+
+<head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial scale=1.0">
-    <title>Tiddy</title>
-    <link rel="shortcut icon" type="image/jpg" href="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
- </head>
- <body>
+    <title>Tiddy</title>
+</head>
+
+<body>
     <div class="background"></div>
-    <div class="container">
+    <div class="container" id="container">
         <div class="form-container sign-up">
             <form>
-               <h1> Create account</h1>
-               <div class="social-icon">
-                <a href="#"><i class='bx bxl-github' ></i></a>
-                <a href="#"><i class='bx bxl-facebook-circle'></i></a>
-                <a href="#"><i class='bx bxl-linkedin-square'></i></a>
-               </div>
+                <h1>Create Account</h1>
+                <div class="social-icons">
+                    <a href="#"><i class='bx bxl-github' ></i></a>
+                    <a href="#"><i class='bx bxl-facebook-circle'></i></a>
+                    <a href="#"><i class='bx bxl-linkedin-square'></i></a>
+                </div>
+                <span>or use your email for registeration</span>
+                <input type="text" placeholder="Name">
+                <input type="email" placeholder="Email">
+                <input type="password" placeholder="Password">
+                <button><a href="about.html">Sign Up</a></button>
             </form>
-            <span>Or use your e-mail for registration</span>
-            <input type="text" placeholder="Name">
-            <input type="email" placeholder="E-mail">
-            <input type="password" placeholder="Password">
-            <button type="submit">SIGN UP</button>
         </div>
         <div class="form-container sign-in">
             <form>
                 <h1>Sign In</h1>
-                <div class="social-icon">
-                 <a href="#"><i class='bx bxl-google-plus-circle'></i></a>
-                 <a href="#"><i class='bx bxl-facebook-circle'></i></a>
-                 <a href="#"><i class='bx bxl-linkedin-square'></i></a>
+                <div class="social-icons">
+                    <a href="#"><i class='bx bxl-github' ></i></a>
+                    <a href="#"><i class='bx bxl-facebook-circle'></i></a>
+                    <a href="#"><i class='bx bxl-linkedin-square'></i></a>
                 </div>
-                <span>Or use your e-mail</span>
-                 <input type="email" placeholder="E-mail">
-                 <input type="password" placeholder="Password">
-                 <a href="#">Forgot your password?</a>
-                 <button type="submit"> <a href="./about.html">SIGN IN</button></a>
+                <span>or use your email password</span>
+                <input type="email" placeholder="Email">
+                <input type="password" placeholder="Password">
+                <a href="#">Forget Your Password?</a>
+                <button><a href="about.html">Sign In</a></button>
             </form>
         </div>
-        <div class="toggle">
-            <div class="toggle-create">
-                <h1>Still dont have an account :D ?</h1>
-                <p>Sign Up to access all the features</p>
-                <button class="hidden" id="login">SIGN IN</button>
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <h1>Welcome Back!</h1>
+                    <p>Ready to conquer your day? Log in and let the checklist adventures begin!</p>
+                    <button class="hidden" id="login">Sign In</button>
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <h1>Hello!</h1>
+                    <p> Register now to craft your personalized checklist realm.</p>
+                    <button class="hidden" id="register">Sign Up</button>
+                </div>
             </div>
         </div>
     </div>
 
-
     <script src="script.js"></script>
- </body>
+</body>
+
 </html>
-
-<!-- <div class="toggle-panel toggle-left">
-            <h1>Welcome back :D</h1>
-            <p>Log in to access all the features</p>
-            <button class="hidden" id="login">SIGN IN</button>
-        </div> -->
-
-
-        <!-- <div class="toggle-panel toggle-left">
-            <h1>Welcome back :D</h1>
-            <p>Log in to access all the features</p>
-            <button class="hidden" id="login">SIGN IN</button>
-        </div> -->

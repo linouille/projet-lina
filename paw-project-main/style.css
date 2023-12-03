@@ -10,14 +10,16 @@ body{
     justify-content: center;
     flex-direction: column;
     height: 100vh;
-    width: 100%;
 }
 .background{
+    position: absolute;
+    height: 100%;
+    width: 100%;
     background-image: url("./brown-papier-graphique-fond-beige-g0nn9m.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    filter: blur(6 px);
+    filter: blur(5px);
 }
 .container{
     background-color: #ede4d6;
@@ -28,26 +30,13 @@ body{
     width: 768px;
     max-width: 100%;
     min-height: 480px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
 }
-.container h1, .toggle-create > h1{
+.container h1 {
     color: #4d422f;
     font-size: 40px;
     line-height: 20px;
     letter-spacing: 0.3px;
     margin: 20px 0;
-}
-
-.toggle-create > h1{
-    color: #bf7e0d;
-    font-size: 40px;
-    line-height: 20px;
-    letter-spacing: 0.3px;
-    margin: 20px 0;
-    white-space: 10px;
-    line-height: 35px;
 }
 
 .container span{
@@ -92,7 +81,8 @@ body{
 }
 .container button.hidden{
     background-color: transparent;
-    background-color: #ffffff;
+    font-size: 16px;
+    background: rgb(120, 167, 130);
 }
 .container form{
     background-color: #ede4d6;
@@ -160,67 +150,52 @@ body{
 }
 .toggle-container{
     position: absolute;
-    top: 109px;
+    top: 0;
     left: 50%;
-    width: 400px;
-    height: 69%;
+    width: 50%;
+    height: 100%;
     overflow: hidden;
     transition: all 0.6s ease-in-out;
     border-radius: 150px 0 0 100px;
     z-index: 1000;
 }
 .container.active .toggle-container{
-    transform: translateX(-400px);
-    border-radius: 0 150px 100px 0;
+    transform: translateX(-100%);
+    border-radius: 0px 150px 100px 0;
 }
 .toggle{
-    background-color: #ede4d6;
-    /* height: 100%;
-    background: linear-gradient(to right, #a0805b, #816854);
-    color: #ffffff; 
-    border-radius: 30px;
+    background-color: #695a41;
+    height: 100%;
+    top: 0;
+    background: linear-gradient(to right, #695a41, #4d422f);
+    color: #ffff;
     position: relative;
     left: -100%;
     height: 100%;
     width: 200%;
     transform: translateX(0);
-    transition: all 0.6s ease-in-out; */
-
-    display : flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 415px;
-    background-color: #5b3a07;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    z-index: 999;
-    border-radius: 30px;
-    /* right: 5%; */
+    transition: all 0.6s ease-in-out;
+}
+.toggle h1{
+    color: #ffffff;
 }
 .container.active .toggle{
     transform: translateX(50%);
 }
-.toggle-create{
+.toggle-panel{
     position: absolute;
-    width: 28%;
-    height: 69%;
-    top: 30;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 30px;
+    text-align: center;
+    top: 0;
     transform: translateX(0);
     transition: all 0.6s ease-in-out;
 }
-
-.panelContainer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 80%;
-    height: 550px;
-    border: 2px solid black;
-}
-
 .toggle-left{
     transform: translateX(-200%);
 }
@@ -233,33 +208,4 @@ body{
 }
 .container.active .toggle-right{
     transform: translateX(200%);
-}
-.toggle-container button{
-    background: rgb(120, 167, 130);
-    padding: 10px 45px;
-    border-radius: 8px;
-    font-weight: 600px;
-    letter-spacing: 0.5;
-    border: 1px solid transparent;
-    align-items: center;
-    text-align: center;
-    color: #ffffff;
-    cursor: pointer;
-    transition: all 0.2s ease;
-}
-.toggle-right button:hover{
-    transform: scale(0.96);
-}
-.toggle-container button.hidden  , .toggle-create > button.hidden{
-    background-color: transparent;
-    background: rgb(120, 167, 130);
-    transition: all 0.2s ease-out 1s;
-}
-
-.toggle-create > button:hover{
-    background-color: transparent;
-    align-items: center;
-    text-align: center;
-    background: rgb(120, 167, 130);
-    margin-right: 200px;
 }
