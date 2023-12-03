@@ -58,17 +58,20 @@ header{
     color: #2e271e;
 }
 form {
+    position: absolute;
+    top: 200px;
+    left: 38%;
     min-height: 20vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
-
 form input, 
 form button {
     padding: 0.5rem;
     padding-left: 1rem;
+    margin: 15px 0;
     font-size: 1.8rem;
     border: none;
     background: white;
@@ -76,7 +79,7 @@ form button {
 }
 
 form button {
-    color: rgb(255, 200, 0);
+    color: rgb(64, 135, 66);
     background: white;
     cursor: pointer;
     transition: all 0.3 ease;
@@ -107,8 +110,9 @@ form button:hover {
 .todo {
     margin: 0.5rem;
     padding-left: 0.5rem;
+    height: 60px;
     background: white;
-    color: rgb(0, 0, 0);
+    color: rgb(106, 90, 75);
     font-size: 1.5rem;
     display: flex;
     justify-content: space-between;
@@ -116,7 +120,10 @@ form button:hover {
     transition: 0.5s;
     border-radius: 2rem;
 }
-
+.todo > .complete-btn{
+    margin: 0;
+    border-radius: 0;
+}
 .todo li {
     flex: 1;
 }
@@ -135,12 +142,13 @@ form button:hover {
 }
 
 .trash-btn {
-    border-top-right-radius: 1.75rem;
-    border-bottom-right-radius: 1.75rem;
+    border-radius: 0 2rem 2rem 0;
+    margin: 0;
     background: rgb(171, 171, 171);
 }
 
 .todo-item {
+    margin: 20px;
     padding: 0rem 0.5rem;
 }
 
