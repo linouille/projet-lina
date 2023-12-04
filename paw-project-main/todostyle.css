@@ -1,12 +1,10 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 body{
-    display: flex;
-    align-items: center;
-    text-align: center;
     background-color: #ede4d6;
     color: #513d3d;
     font-family: "poppins", sans-serif;
@@ -27,6 +25,7 @@ header{
     z-index: 100 ;
     box-shadow: 3px 2px 2px#b5a89c;
 }
+
 .navbar h2{
     font-size: 24px;
     position: absolute;
@@ -57,21 +56,24 @@ header{
 .navbar ul li:hover a{
     color: #2e271e;
 }
+
+h1{
+    text-align: center;
+    font-size: 50px;
+    margin-top: 110px;
+    text-shadow: 2px 2px 4px #b5a89c;
+} 
 form {
-    position: absolute;
-    top: 200px;
-    left: 38%;
     min-height: 20vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
 }
+
 form input, 
 form button {
     padding: 0.5rem;
     padding-left: 1rem;
-    margin: 15px 0;
     font-size: 1.8rem;
     border: none;
     background: white;
@@ -79,7 +81,7 @@ form button {
 }
 
 form button {
-    color: rgb(64, 135, 66);
+    color: rgb(95, 75, 1);
     background: white;
     cursor: pointer;
     transition: all 0.3 ease;
@@ -88,7 +90,7 @@ form button {
 
 form button:hover {
     color: white;
-    background: rgb(255, 200, 0);
+    background: rgb(95, 75, 1);
 }
 
 .bxs-plus-circle {
@@ -110,9 +112,8 @@ form button:hover {
 .todo {
     margin: 0.5rem;
     padding-left: 0.5rem;
-    height: 60px;
     background: white;
-    color: rgb(106, 90, 75);
+    color: #4c3828;
     font-size: 1.5rem;
     display: flex;
     justify-content: space-between;
@@ -120,10 +121,7 @@ form button:hover {
     transition: 0.5s;
     border-radius: 2rem;
 }
-.todo > .complete-btn{
-    margin: 0;
-    border-radius: 0;
-}
+
 .todo li {
     flex: 1;
 }
@@ -138,17 +136,16 @@ form button:hover {
 }
 
 .complete-btn {
-    background: rgb(255, 200, 0);
+    background: rgb(46, 109, 45);
 }
 
 .trash-btn {
-    border-radius: 0 2rem 2rem 0;
-    margin: 0;
-    background: rgb(171, 171, 171);
+    border-top-right-radius: 1.75rem;
+    border-bottom-right-radius: 1.75rem;
+    background: #5f4733;
 }
 
 .todo-item {
-    margin: 20px;
     padding: 0rem 0.5rem;
 }
 
@@ -183,7 +180,7 @@ select {
 }
 
 select {
-    color:rgb(255, 200, 0);
+    color:#4c3828;
     width: 10rem;
     height: 3.2rem;
     cursor: pointer;
@@ -193,7 +190,7 @@ select {
 .select::after {
     content: "\25BC";
     position: absolute;
-    background:rgb(255, 200, 0);
+    background:rgb(61, 118, 59);
     top: 0;
     right: 0;
     padding: 1rem;
@@ -203,5 +200,5 @@ select {
 
 .select:hover::after {
     background: white;
-    color: rgb(255, 200, 0);
+    color: rgb(61, 118, 59);
 }

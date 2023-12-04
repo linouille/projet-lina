@@ -10,13 +10,21 @@ filterOption.addEventListener("change", filterTodo);
 
 function addTodo(event) {
     event.preventDefault();
+    //check si le todo est vide
+    const todoText = todoInput.value.trim();
+    if (todoText === "") {
+        
+        alert("Please enter a non-empty todo.");
+        return;
+    }
+
     const todoDiv = document.createElement("div");
     todoDiv.classList.add("todo");
     const newTodo = document.createElement("li");
     newTodo.innerText = todoInput.value; 
     newTodo.classList.add("todo-item");
     todoDiv.appendChild(newTodo);
-    //ADDING TO LOCAL STORAGE 
+    //ajout a la memoire locale 
     saveLocalTodos(todoInput.value);
     
     const completedButton = document.createElement("button");
