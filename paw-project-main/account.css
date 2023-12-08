@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #f3eee8;
+    color: #513d3d;
+    font-family: "poppins", sans-serif;
+    min-height: 100vh;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 110px;
+    height: 100%;
+    padding: 30px;
+    background: #d2b38d;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 100 ;
+    box-shadow: 3px 2px 2px#b5a89c;
+}
+
+.navbar h2{
+    font-size: 24px;
+    position: absolute;
+    font-weight: bold;
+    top: 30px;
+    left: 8px;
+    color: #513d3d;
+}
+.navbar ul li{
+    padding: 15px;
+    border-bottom: 1px solid #d2b38d;
+    border-top: 1px solid #d7b891;
+}
+.navbar ul li a{
+    font-size: 18px;
+    color: #3c3128;
+    font-weight: 500;
+    text-decoration: none;
+    display: block;
+    left: 3px;
+}
+.navbar ul li a .bx{
+    width: 25px;
+}
+.navbar ul li:hover{
+    background: #debe98;
+}
+.navbar ul li:hover a{
+    color: #2e271e;
+}
+.container{
+    align-items: center;
+    text-align: center;
+}
+.content{
+    background: white;
+    margin-top: 80px;
+    width: 450px;
+    margin-left: 37%;
+    height: 500px;
+    border-radius: 30px;
+    box-shadow: 3px 3px 9px #c2baaf;
+}
+.outline{
+    position: absolute;
+    top: 95px;
+    left: 38%;
+    width: 420px;
+    height: 67%;
+    border-radius: 30px;
+    outline: 1px solid#70604a;
+}
+.container h1{
+    font-size: 50px;
+    text-shadow: 2px 2px 3px #a69e94;
+    position: absolute;
+    top: 140px;
+    left: 43%;
+}
+.container img{
+    width: 195px;
+    height: auto;
+    margin-top: 140px;
+}
+.container i{
+    color: #2f6b25;
+    font-size: 20px;
+    position: absolute;
+    top: 473px;
+    left: 63%;
+    cursor: pointer;
+}
+.container i:hover{
+    transform: scale(0.98);
+    transition: all .2s ease;
+}
+.container .milestone-container{
+    background: linear-gradient(to right, #cbcbcb, #e5e5e5 ) ;
+    position: absolute;
+    height: 5%;
+    width: 15%;
+    top: 465px;
+    left: 45%;
+    border-radius: 30px;
+    outline: 1px solid #c5c4c4;
+}
+.container p{
+    margin-top: 15px;
+    font-size: 17px;
+    font-weight: 400;
+    color: #513d3d;
+}
