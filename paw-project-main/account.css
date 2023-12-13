@@ -6,7 +6,6 @@
 
 body{
     background-color: #f3eee8;
-    color: #513d3d;
     font-family: "poppins", sans-serif;
     min-height: 100vh;
 }
@@ -60,57 +59,177 @@ header{
     align-items: center;
     text-align: center;
 }
-.content{
-    background: white;
+.stuff{
+    background: linear-gradient(to right, #6c5942, #8f7758 ) ;
+    color: white;
     margin-top: 80px;
     width: 450px;
-    margin-left: 37%;
+    margin-left: 50%;
     height: 500px;
+    text-align: center;
+    align-items: center;
     border-radius: 30px;
     box-shadow: 3px 3px 9px #c2baaf;
+    z-index: 0;
+}
+.stuff h1{
+    color: white;
+    font-size: 46px;
+    font-weight: 540;
+    text-align: center;
+    position: absolute;
+    top: 130px;
+    left: 51%;
+}
+.disconnect{
+    position: absolute;
+    top: 435px;
+    left: 62%;
+    padding: 10px 35px;
+    border-radius: 10px;
+    background-color: rgb(255, 0, 0);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.disconnect:hover{
+    transform: scale(0.96);
+}
+.disconnect a{
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    font-weight: 530;
+}
+.stat{
+    position: absolute;
+    top: 315px;
+    left: 62%;
+    padding: 10px 53px;
+    border-radius: 10px;
+    background-color: rgb(112, 160, 95);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.stat:hover{
+    transform: scale(0.96);
+}
+.stat a{
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    font-weight: 530;
+}
+.stat .text{
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    color: #3c3128;
+    white-space: nowrap;
+    padding: 10px 15px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px #513d3d;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+.stat .text::before{
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 81%;
+    transform: translateX(-50%) rotate(45deg);
+    padding: 10px 10px;
+    background: white;
+    z-index: 0;
+}
+.stat:hover .text{
+    top: -130%;
+    visibility: visible;
+    opacity: 1;
+}
+.code{
+    position: absolute;
+    top: 190px;
+    left: 62%;
+    padding: 10px 25px;
+    border-radius: 10px;
+    background-color: rgb(112, 160, 95);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.code:hover{
+    transform: scale(0.96);
+}
+.code a{
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    font-weight: 530;
+}
+.content{
+    position: absolute;
+    background: white;
+    top: 80px;
+    width: 450px;
+    left: 28%;
+    height: 500px;
+    border-radius: 30px 100px 100px 30px;
+    box-shadow: 5px 1px 10px #4b4a4a;
 }
 .outline{
     position: absolute;
-    top: 95px;
-    left: 38%;
+    top: 18px;
+    left: 15px;
     width: 420px;
-    height: 67%;
-    border-radius: 30px;
+    height: 93%;
+    border-radius: 30px 100px 100px 30px;
     outline: 1px solid#70604a;
 }
 .container h1{
     font-size: 50px;
     text-shadow: 2px 2px 3px #a69e94;
+    color: #3c3128;
     position: absolute;
-    top: 140px;
-    left: 43%;
+    top: 55px;
+    left: 20%;
 }
 .container img{
-    width: 195px;
+    width: 190px;
     height: auto;
     margin-top: 140px;
 }
-.container i{
-    color: #2f6b25;
-    font-size: 20px;
-    position: absolute;
-    top: 473px;
-    left: 63%;
-    cursor: pointer;
-}
-.container i:hover{
-    transform: scale(0.98);
-    transition: all .2s ease;
-}
-.container .milestone-container{
+.container .progress{
     background: linear-gradient(to right, #cbcbcb, #e5e5e5 ) ;
     position: absolute;
     height: 5%;
     width: 15%;
     top: 465px;
-    left: 45%;
+    left: 36%;
     border-radius: 30px;
     outline: 1px solid #c5c4c4;
+    overflow: hidden;
+}
+.fill-progress{
+    width: 0%;
+    height: 100%;
+    border-radius: 30px;
+    background: linear-gradient(to right, #433a22, #75643f );
+    transition: all 0.6s;
+}
+.text-progress{
+    position: absolute;
+    top: 17px;
+    left: 15px;
+    color: rgb(255, 255, 255);
+   transform: translateY(-50%);
 }
 .container p{
     margin-top: 15px;
@@ -118,3 +237,4 @@ header{
     font-weight: 400;
     color: #513d3d;
 }
+
