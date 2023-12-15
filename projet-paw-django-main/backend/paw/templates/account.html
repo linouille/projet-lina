@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="{% static 'paw/shortcut.png' %}">
+        <link rel="stylesheet" href={% static 'paw/account.css' %}>
+        <!--google logos-->
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <title>Tiddy</title>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar">
+                <h2><i class='bx bxs-balloon'></i>Tiddy</h2>
+                <ul>
+                <li><a href={% url 'about' %}><i class='bx bxs-home'></i>Home</a></li>
+                <li><a href={% url 'task' %}><i class='bx bxs-check-square'></i>Todolist</a></li>
+                <li><a href={% url 'calendar' %}><i class='bx bxs-calendar'></i>Calendar</a></li>
+                <li><a href={% url 'motivation' %}><i class='bx bxs-smile'></i>Motivation</a></li>
+                </ul>
+            </nav>    
+        </header>
+
+        <div class="stuff">
+            <h1>More</h1>
+            <button class="disconnect" id='resetButton'><a href="{% url 'logout' %}">Disconnect</a></button>
+            <button class="stat">
+                <span class="text">Completed:{{ completed_tasks }} <br>Deleted: {{ deleted_tasks }}  </span>
+                <a href="#">Statistic</a>
+            </button>
+            <button class="code"><a href="https://github.com/linouille/projet-paw.git">Source Code</a></button>
+        </div>
+        <div class="container">
+         <div class="content">
+             <h1>My Account</h1>
+             <div class="image-user"><img src="{% static 'paw/users.jpg' %}"></div>
+             <p>milestone</p>
+             <div class="outline"></div>
+         </div>
+         <div class="progress">
+            <div class="fill-progress" style="width: {{ completion_percentage}}%;"></div>
+            <span class="text-progress">{{ completion_percentage }}%</span>
+         </div>
+        </div>
+        <script src="{% static 'paw/account.js' %}"></script>
+    </body>
+</html>

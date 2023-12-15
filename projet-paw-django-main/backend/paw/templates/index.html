@@ -1,0 +1,92 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{% static 'paw/shortcut.png' %}">
+    <!-- Link to your static CSS file -->
+    <link rel="stylesheet" href="{% static 'paw/style.css' %}">
+    <!-- Google logos -->
+    
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Tiddy</title>
+</head>
+<body>
+    <div class="background"></div>
+    <div class="container {% if register_errors %}active{% endif %}" id="container">
+        <div class="form-container sign-up">
+            <form method="post" action="{% url 'auth_view' %}">
+                {% csrf_token %}
+                <input type="hidden" name="action" value="register">
+                <h1>Create Account</h1>
+                <div class="social-icons">
+                    <a href="#"><i class='bx bxl-github' ></i></a>
+                    <a href="#"><i class='bx bxl-facebook-circle'></i></a>
+                    <a href="#"><i class='bx bxl-linkedin-square'></i></a>
+                </div>
+                <span>or use your email for registration</span>
+                <input type="text" name="username" placeholder="Username">
+                <input type="email" name="email" placeholder="Email">
+                <input type="password" name="password1" placeholder="Password">
+                <input type="password" name="password2" placeholder="Confirm Password"> 
+                <button type="submit">Sign Up</button>
+                {% if register_errors %}
+        <div class="alert alert-danger" role="alert">
+            {{ register_errors }}
+        </div>
+               {% endif %}
+            </form>
+        </div>
+
+        <div class="form-container sign-in">
+            <form method="post" action="{% url 'auth_view' %}">
+                {% csrf_token %}
+                <input type="hidden" name="action" value="login">
+                <h1>Sign In</h1>
+                <div class="social-icons">
+                    <a href="#"><i class='bx bxl-github' ></i></a>
+                    <a href="#"><i class='bx bxl-facebook-circle'></i></a>
+                    <a href="#"><i class='bx bxl-linkedin-square'></i></a>
+                </div>
+                <span>or use your email password</span>
+                <input type="text" name="username" placeholder="Username">
+                <input type="password" name="password" placeholder="Password">
+                <a href="#">Forgot Your Password?</a>
+                <button type="submit">Sign In</button>
+
+                {% if login_errors %}
+
+                <h3>{{ login_errors }}</h3>
+
+                {% endif %}
+
+            </form>
+        </div>
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <h1>Welcome Back!</h1>
+                    <p>Ready to conquer your day? Log in and let the checklist adventures begin!</p>
+                    <button class="hidden" id="login">Sign In</button>
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <h1>Hello!</h1>
+                    <p> Register now to craft your personalized checklist realm.</p>
+                    <button class="hidden" id="register">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="{% static 'paw/script.js' %}"></script>
+</body>
+</html>
+
+
+
+
+
+

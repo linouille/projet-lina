@@ -1,10 +1,11 @@
+{% load static %}
 <!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial scale=1.0">
-    <link rel="shortcut icon" type="image/jpg" href="">
-    <link rel="stylesheet" href="calendar.css">
+    <link rel="shortcut icon" href={% static 'paw/shortcut.css' %}>
+    <link rel="stylesheet" href={% static 'paw/calendar.css' %}>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>My Calendar</title>
 </head>
@@ -12,10 +13,10 @@
   <nav class="navbar">
       <h2><i class='bx bxs-balloon'></i>Tiddy</h2>
       <ul>
-      <li><a href="about.html"><i class='bx bxs-home'></i>Home</a></li>
-      <li><a href="list.html"><i class='bx bxs-check-square'></i>Todolist</a></li>
-      <li><a href="motivation.html"><i class='bx bxs-smile'></i>Motivation</a></li>
-      <li><a href="account.html"><i class='bx bxs-user'></i>account</a></li>
+        <li><a href={% url 'about' %}><i class='bx bxs-home'></i>Home</a></li>
+        <li><a href={% url 'task' %}><i class='bx bxs-check-square'></i>Todolist</a></li>
+        <li><a href={% url 'motivation' %}><i class='bx bxs-smile'></i>Motivation</a></li>
+        <li><a href={% url 'account' %}><i class='bx bxs-user'></i>account</a></li>
       </ul>
   </nav>    
 </header>
@@ -60,6 +61,6 @@
       <div class="month-list"></div>
     </div>
   </div>
-    <script src="calendar_script.js"></script>
+    <script src={% static 'paw/calendar_script.js' %}></script>
 </body>
 </html>

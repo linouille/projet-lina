@@ -1,0 +1,49 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="{% static 'paw/shortcut.png' %}" />
+    <link rel="stylesheet" href="{% static 'paw/todostyle.css' %}" />
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
+    <title>Tiddy</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <h2><i class="bx bxs-balloon"></i>Tiddy</h2>
+        <ul>
+          <li><a href={% url 'about' %}><i class="bx bxs-home"></i>Home</a></li>
+          <li><a href={% url 'calendar' %}><i class="bx bxs-calendar"></i>Calendar</a></li>
+          <li><a href={% url 'motivation' %}><i class="bx bxs-smile"></i>Motivation</a></li>
+          <li><a href={% url 'account' %}><i class="bx bxs-user"></i>account</a></li>
+        </ul>
+      </nav>
+    </header>
+    <h1>My todo-list</h1>
+    <form action="">
+      <div class="test">
+        <input type="text" class="todo-input">
+        <button class="todo-button" type="submit">
+            <i class='bx bxs-plus-circle'></i>
+        </button>
+      </div>
+      <div class="select">
+        <select name="todos" class="filter-todo">
+            <option value="all">All</option>
+            <option value="completed">Completed</option>
+            <option value="incomplete">Incomplete</option>
+        </select>
+      </div>
+    </form>
+      {% for task in tasks %}
+      <div class="todo-container">
+        <ul class="todo-list"></ul>
+      </div>
+      {% endfor %}
+    <script src="{% static 'paw/todoscript.js' %}"></script>
+  </body>
+</html>
